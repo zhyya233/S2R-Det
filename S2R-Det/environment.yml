@@ -1,0 +1,21 @@
+name: s2r-det
+channels:
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+      - torch==2.11.0
+      - torchvision==0.26.0
+      - mmcv==2.1.0
+      - mmengine==0.10.7
+      - mmdet==3.3.0
+      - numpy==2.2.6
+      - opencv-python==4.11.0.86
+      - pycocotools==2.0.11
+      - pandas==2.3.3
+      - scipy==1.15.3
+      - pyarrow==17.0.0
+      - matplotlib==3.10.8
+      - tqdm==4.67.3
+      - Pillow==12.0.0
