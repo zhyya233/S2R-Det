@@ -203,19 +203,3 @@ Retention cache:
 python scripts/analysis/build_retention_cache.py --help
 ```
 
-## Checkpoints
-
-The code-only package does not embed `.pth` files. Checkpoint hashes are retained in:
-
-```text
-weights/SHA256SUMS
-```
-
-For GitHub, store large checkpoints with Git LFS or attach them to a GitHub Release.
-
-## Naming policy
-
-Public file names describe their function or dataset. Internal stage labels such as
-B00/K00/G00/P00/X00/Y00 are intentionally not used in public paths or file names.
-Where such identifiers remain inside source code, they are preserved only as frozen
-experiment/variant identifiers to avoid altering experimental semantics.
