@@ -104,13 +104,6 @@ class-agnostic interpolation policy is an explicit implementation choice.
 ONNX Runtime is dependency-gated, and TensorRT requires an external engine adapter;
 neither backend has runtime validation here.
 
-## Reproducibility and availability
-
-This is a preliminary paper-aligned reference implementation. Original experimental
-weights and logs are not included, and the paper's results have not been independently
-reproduced with this reconstructed package. The author plans to release the final
-experimental source after manuscript acceptance and may revise this preview after
-additional validation.
 
 ## Citation, contact and license
 
