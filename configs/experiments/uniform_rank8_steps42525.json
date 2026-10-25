@@ -1,0 +1,8 @@
+{
+  "extends": "../repair/common.json",
+  "protocol": {
+    "steps": 42525
+  },
+  "evaluation_split": "validation",
+  "expected_primary_trainable_parameters": 3216
+}

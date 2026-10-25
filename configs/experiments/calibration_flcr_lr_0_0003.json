@@ -1,0 +1,7 @@
+{
+  "extends": "../repair/common.json",
+  "protocol": {
+    "steps": 12150
+  },
+  "evaluation_split": "validation"
+}

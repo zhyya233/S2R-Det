@@ -1,0 +1,5 @@
+{
+  "extends": "../repair/common.json",
+  "evaluation_split": "validation",
+  "expected_primary_trainable_parameters": 6432
+}

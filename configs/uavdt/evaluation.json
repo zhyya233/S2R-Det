@@ -1,0 +1,10 @@
+{
+  "architecture": "externally supplied; do not infer from repair parameter count",
+  "baseline": "own local trained baseline",
+  "format": "retained COCO with unique image IDs and explicit sequence_id",
+  "class_aware": "COCO AP0.50:0.05:0.95",
+  "class_agnostic": "COCO101-point reconstruction atIoU0.50/0.70; historical evaluator equivalence unverified",
+  "sequence_endpoint": "equal-weight per-sequence AP70",
+  "bootstrap_replicates": 10000,
+  "reference_sequence_count": 20
+}

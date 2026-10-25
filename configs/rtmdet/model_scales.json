@@ -1,0 +1,41 @@
+{
+  "shared_recipe": "configs/repair/s2r_det.json",
+  "sizes": {
+    "t": {
+      "model_size": "tiny",
+      "detector_config": "configs/rtmdet/rtmdet_tiny_visdrone.py",
+      "baseline": "externally supplied local trained checkpoint",
+      "insertion_sets": "externally supplied architecture-aware manifest; no universal Head selection",
+      "rank": 8,
+      "budget": "must be declared from architecture; not forced to3216",
+      "architecture_provenance": "tiny: preserved source model dictionary; s/m/l: explicit upstream3.3 templates with inherited tiny task/policy; historical configuration equivalence unverified"
+    },
+    "s": {
+      "model_size": "small",
+      "detector_config": "configs/rtmdet/rtmdet_small_visdrone.py",
+      "baseline": "externally supplied local trained checkpoint",
+      "insertion_sets": "externally supplied architecture-aware manifest; no universal Head selection",
+      "rank": 8,
+      "budget": "must be declared from architecture; not forced to3216",
+      "architecture_provenance": "tiny: preserved source model dictionary; s/m/l: explicit upstream3.3 templates with inherited tiny task/policy; historical configuration equivalence unverified"
+    },
+    "m": {
+      "model_size": "medium",
+      "detector_config": "configs/rtmdet/rtmdet_medium_visdrone.py",
+      "baseline": "externally supplied local trained checkpoint",
+      "insertion_sets": "externally supplied architecture-aware manifest; no universal Head selection",
+      "rank": 8,
+      "budget": "must be declared from architecture; not forced to3216",
+      "architecture_provenance": "tiny: preserved source model dictionary; s/m/l: explicit upstream3.3 templates with inherited tiny task/policy; historical configuration equivalence unverified"
+    },
+    "l": {
+      "model_size": "large",
+      "detector_config": "configs/rtmdet/rtmdet_large_visdrone.py",
+      "baseline": "externally supplied local trained checkpoint",
+      "insertion_sets": "externally supplied architecture-aware manifest; no universal Head selection",
+      "rank": 8,
+      "budget": "must be declared from architecture; not forced to3216",
+      "architecture_provenance": "tiny: preserved source model dictionary; s/m/l: explicit upstream3.3 templates with inherited tiny task/policy; historical configuration equivalence unverified"
+    }
+  }
+}

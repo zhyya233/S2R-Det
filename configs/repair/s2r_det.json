@@ -1,0 +1,18 @@
+{
+  "extends": "common.json",
+  "method": "s2r_det",
+  "allowed_seeds": [
+    0,
+    1,
+    2
+  ],
+  "protocol": {
+    "steps": 42525,
+    "retention_lambda": 0.25
+  },
+  "sampling": {
+    "kind": "failure_stratified",
+    "failure_fraction": 0.7
+  },
+  "requires_actual_fcsl_selection": true
+}

@@ -1,0 +1,18 @@
+{
+  "extends": "../repair/common.json",
+  "method": "full_finetuning",
+  "uses_flcr": false,
+  "allowed_seeds": [
+    0,
+    1,
+    2
+  ],
+  "protocol": {
+    "steps": 25245,
+    "learning_rate": 0.0001
+  },
+  "evaluation_split": "test-dev",
+  "engineering_assumptions": [
+    "Uniform sampling and no retention are explicit reconstruction defaults for incompletely assigned primary control settings; historical equivalence unverified."
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "extends": "../repair/common.json",
+  "protocol": {
+    "retention_lambda": 0.25
+  },
+  "sampling": {
+    "kind": "top_loss"
+  },
+  "evaluation_split": "validation",
+  "expected_primary_trainable_parameters": 3216
+}

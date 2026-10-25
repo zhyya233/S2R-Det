@@ -1,0 +1,22 @@
+{
+  "format": "retained non-crowd COCO annotations",
+  "input_size": [
+    640,
+    640
+  ],
+  "padding_RGB": [
+    114,
+    114,
+    114
+  ],
+  "reference_population_counts_only": {
+    "test_dev_images": 1610,
+    "test_dev_GT": 75102,
+    "validation_images": 548,
+    "validation_GT": 38759,
+    "validation_diagnostic_GT": 27988
+  },
+  "counts_not_returned_by_evaluators": true,
+  "diagnostic_scope": "original_area<1024 OR actual_resized_area<256; unique(image_id,annotation_id)",
+  "density": "training-only linear1/3 and2/3 quantiles including empty images"
+}

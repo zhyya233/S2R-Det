@@ -1,0 +1,13 @@
+{
+  "purpose": "Only the documented conditional primary96-channel Head insertion specification; NOT a complete five-group FCSL insertion policy",
+  "paths": [
+    "bbox_head.cls_convs.0.1.conv",
+    "bbox_head.reg_convs.0.1.conv"
+  ],
+  "required_channels": [
+    96,
+    96
+  ],
+  "rank": 8,
+  "expected_parameters": 3216
+}

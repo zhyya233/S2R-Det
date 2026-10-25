@@ -1,0 +1,17 @@
+{
+  "extends": "../repair/common.json",
+  "allowed_seeds": [
+    0,
+    1,
+    2
+  ],
+  "protocol": {
+    "retention_lambda": 0.25
+  },
+  "sampling": {
+    "kind": "failure_stratified",
+    "failure_fraction": 0.7
+  },
+  "evaluation_split": "validation",
+  "expected_primary_trainable_parameters": 3216
+}

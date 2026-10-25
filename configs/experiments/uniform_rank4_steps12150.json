@@ -1,0 +1,9 @@
+{
+  "extends": "../repair/common.json",
+  "rank": 4,
+  "protocol": {
+    "steps": 12150
+  },
+  "evaluation_split": "validation",
+  "expected_primary_trainable_parameters": 1608
+}

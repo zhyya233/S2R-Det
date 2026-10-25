@@ -1,0 +1,5 @@
+{
+  "method": "frozen",
+  "operation": "infer/evaluate only; no repair optimization",
+  "seeds": "one original tiny baseline; additional baseline statistical provenance not inferred"
+}

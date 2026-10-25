@@ -1,0 +1,10 @@
+{
+  "extends": "../repair/common.json",
+  "allowed_seeds": [
+    0,
+    1,
+    2
+  ],
+  "evaluation_split": "validation",
+  "expected_primary_trainable_parameters": 3216
+}

@@ -1,0 +1,9 @@
+{
+  "extends": "../repair/common.json",
+  "method": "flcr_fixed_spatial",
+  "evaluation_split": "validation",
+  "expected_primary_trainable_parameters": 3072,
+  "engineering_assumptions": [
+    "Uniform sampling and retention disabled are explicit choices for the underspecified exploratory condition; not recovered historical settings."
+  ]
+}

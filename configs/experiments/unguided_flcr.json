@@ -1,0 +1,16 @@
+{
+  "extends": "../repair/common.json",
+  "method": "unguided_flcr",
+  "allowed_seeds": [
+    0,
+    1,
+    2
+  ],
+  "protocol": {
+    "steps": 42525
+  },
+  "evaluation_split": "test-dev",
+  "engineering_assumptions": [
+    "Uniform sampling and no retention are explicit reconstruction defaults for incompletely assigned primary control settings; historical equivalence unverified."
+  ]
+}

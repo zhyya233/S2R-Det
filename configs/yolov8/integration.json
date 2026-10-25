@@ -1,0 +1,11 @@
+{
+  "adapter_factory": "required module:function implementing the documented YOLORepairAdapter boundary",
+  "native_training_loss": "supplied by architecture adapter; do not use RTMDet assigner",
+  "placement": "externally supplied eligible convolutions and insertion manifest",
+  "reference_parameter_counts_not_enforced_on_unverified_architecture": {
+    "flcr": 2192,
+    "bottleneck_adapter": 4384
+  },
+  "repair_recipe": "configs/repair/s2r_det.json",
+  "bottleneck_control": "explicit external implementation required"
+}

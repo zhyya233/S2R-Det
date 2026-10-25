@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "S2R-Det repair recipe",
+  "type": "object",
+  "required": [
+    "method",
+    "protocol",
+    "sampling",
+    "allowed_seeds"
+  ],
+  "properties": {
+    "method": {
+      "type": "string"
+    },
+    "uses_flcr": {
+      "type": "boolean"
+    },
+    "rank": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "allowed_seeds": {
+      "type": "array",
+      "items": {
+        "enum": [
+          0,
+          1,
+          2
+        ]
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "protocol": {
+      "type": "object",
+      "required": [
+        "steps",
+        "batch_size",
+        "learning_rate",
+        "warmup_steps",
+        "weight_decay",
+        "retention_lambda"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "steps": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "batch_size": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "learning_rate": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "warmup_steps": {
+          "type": "integer",
+          "minimum": 2
+        },
+        "workers": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "weight_decay": {
+          "type": "number",
+          "minimum": 0
+        },
+        "retention_lambda": {
+          "type": "number",
+          "minimum": 0
+        }
+      }
+    },
+    "sampling": {
+      "type": "object",
+      "required": [
+        "kind"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "uniform",
+            "failure_stratified",
+            "random_subset",
+            "top_loss"
+          ]
+        },
+        "failure_fraction": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    },
+    "norm_paths": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "expected_primary_trainable_parameters": {
+      "type": "integer",
+      "minimum": 1
+    }
+  },
+  "description": "Applies to the effective recipe returned by s2r_det.utils.config.load_recipe after relative JSON inheritance."
+}

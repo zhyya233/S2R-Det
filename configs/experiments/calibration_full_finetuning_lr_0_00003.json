@@ -1,0 +1,10 @@
+{
+  "extends": "../repair/common.json",
+  "method": "full_finetuning",
+  "uses_flcr": false,
+  "protocol": {
+    "steps": 12150,
+    "learning_rate": 3e-05
+  },
+  "evaluation_split": "validation"
+}
