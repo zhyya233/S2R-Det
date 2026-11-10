@@ -1,7 +1,6 @@
 # S²R-Det — Preliminary Reference Implementation
 
-Paper: **S²R-Det: Failure-Contrastive Sensitivity-Guided Repair for Lightweight UAV Small-Object Detection**  
-Hongyuan Zhang, Yamin Cheng, and Hongwei Duan · Xihua University
+Paper: **S²R-Det: Failure-Contrastive Sensitivity-Guided Repair for Lightweight UAV Small Object Detection**  
 
 S²R-Det repairs a trained detector on its original task using labeled images and a
 restricted adaptation budget. It freezes the original detector weights, places
