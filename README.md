@@ -107,8 +107,7 @@ neither backend has runtime validation here.
 ## Citation, contact and license
 
 Use the paper title and authors above when referring to this work. A DOI, acceptance
-status and publication date are not yet specified. Corresponding author:
-Yamin Cheng, `chengyamin16@gmail.com`.
+status and publication date are not yet specified.
 
 A software license has not yet been selected; see [LICENSE](LICENSE) and
 [dependency notices](NOTICE.md). The author must resolve licensing before public upload.
