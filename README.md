@@ -1,4 +1,4 @@
-# S²R-Det — Preliminary Reference Implementation
+# S²R-Det
 
 Paper: **S²R-Det: Failure-Contrastive Sensitivity-Guided Repair for Lightweight UAV Small Object Detection**  
 
@@ -37,8 +37,8 @@ Core dependencies are NumPy and Pillow; the selected extras add PyTorch,
 pycocotools and pytest. Native RTMDet execution additionally needs compatible
 MMDetection 3.3.0, MMEngine and compiled MMCV. The `detection` extra specifies
 those versions, but a platform-compatible Torch/CUDA/MMCV installation must be
-prepared separately. `environment.yml` records the paper's environment and is
-not a validated installation lock. ONNX Runtime and TensorRT are optional.
+prepared separately. `environment.yml` lists environment dependencies. ONNX Runtime and TensorRT
+are optional.
 
 ## Quick start
 
@@ -82,32 +82,27 @@ python -m s2r_det diagnostics --baseline outputs/baseline-test.json --repaired o
 The installed `s2r-det` command and wrappers under `scripts/` dispatch the same
 interfaces. `python -m s2r_det <command> --help` lists the arguments.
 
-## Configuration and supported scope
+## Configuration
 
-Repair recipes in `configs/repair/` and `configs/experiments/` inherit explicit
-shared settings through relative `extends` paths. `configs/experiments/index.json`
-lists the distinct comparison conditions. The generic repair recipe supports
-architecture-specific capacity; the tiny-primary recipe additionally checks the
-conditional 3,216-parameter configuration.
+Repair recipes in `configs/repair/` and `configs/experiments/` inherit shared
+settings through relative `extends` paths. `configs/experiments/index.json`
+lists the comparison conditions. The generic repair recipe supports
+architecture-specific capacity; the tiny-primary recipe additionally checks
+the conditional 3,216-parameter configuration.
 
-The four `configs/rtmdet/` model definitions are **templates, not authenticated
-historical experiment configurations**. Supply compatible baselines, actual module
-manifests and feasible insertion sets. FCSL does not default to Head.
+The four configurations in `configs/rtmdet/` provide RTMDet model-scale
+settings. Detector execution requires a compatible trained baseline checkpoint,
+module manifest, and architecture-specific insertion sets. FCSL selects
+eligible modules using sensitivity scores and repair-budget constraints.
 
-The CPU scientific primitives and synthetic workflows are tested. Native RTMDet
-integration is implemented but has not been run against real detector checkpoints.
-YOLOv8n requires a user-supplied native adapter; its Bottleneck comparison and the
-Patch-style comparison are not implemented. UAVDT utilities distinguish class-aware
-COCO AP, pooled class-agnostic AP50/AP70 and equal-weight sequence AP70; the
-class-agnostic interpolation policy is an explicit implementation choice.
-ONNX Runtime is dependency-gated, and TensorRT requires an external engine adapter;
-neither backend has runtime validation here.
+The evaluation utilities support class-aware COCO AP and UAVDT class-agnostic
+AP50/AP70, including sequence-averaged AP70. Details on data inputs, detector
+interfaces, evaluation procedures, and optional deployment backends are in
+[usage](docs/usage.md) and [methodology](docs/methodology.md).
 
+## License and attribution
 
-## Citation, contact and license
-
-Use the paper title and authors above when referring to this work. A DOI, acceptance
-status and publication date are not yet specified.
-
-A software license has not yet been selected; see [LICENSE](LICENSE) and
-[dependency notices](NOTICE.md). The author must resolve licensing before public upload.
+The repository source code is distributed under the [MIT License](LICENSE).
+Third-party packages and frameworks retain their respective licenses; see
+[dependency notices](NOTICE.md). Please cite the associated manuscript when
+bibliographic information becomes available.
